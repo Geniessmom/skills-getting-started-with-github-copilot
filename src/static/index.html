@@ -10,6 +10,7 @@
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <p>Browse the clubs and programs available this semester, then sign up with your school email.</p>
     </header>
 
     <main>
@@ -23,10 +24,10 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
+        <form id="signup-form" aria-describedby="signup-help">
           <div class="form-group">
             <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <input type="email" id="email" required placeholder="your-email@mergington.edu" autocomplete="email" />
           </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
@@ -37,7 +38,8 @@
           </div>
           <button type="submit">Sign Up</button>
         </form>
-        <div id="message" class="hidden"></div>
+        <p id="signup-help" class="form-help">Each student can sign up for an activity only once.</p>
+        <div id="message" class="hidden" role="status" aria-live="polite"></div>
       </section>
     </main>
 
